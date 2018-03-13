@@ -2,7 +2,7 @@ from __future__ import division
 import sys
 
 #CODEdir = r'D:\6 - Circle_AR4_LaminarBL\PIV\Test_1_2_3\PIV\Test_1_2_3_testing\Python Codes'
-CODEdir = r'D:\Dropbox\Dropbox\Python Code'
+CODEdir = r'D:\Dropbox\Dropbox\New folder\Python_Code'
 if CODEdir not in sys.path:
     sys.path.append(CODEdir)
 
@@ -66,6 +66,16 @@ WRKSPCfilenames_both = [[r'circle_z_1.5mm', r'circle_z_3mm',
 #                         r'square_z_10.5mm', r'square_z_27mm',
 #                         r'square_z_45mm', 
 #                         ]]# Name of the MATLAB workspaces
+#                           # for spectra
+WRKSPCfilenames_both = [[r'circle_z_1.5mm', r'circle_z_10.5mm',
+                         r'circle_z_12mm', r'circle_z_27mm', 
+                         r'circle_z_39mm', r'circle_z_45mm',
+                         r'circle_z_52.5mm'], 
+                        [r'square_z_1.5mm', r'square_z_10.5mm', 
+                         r'square_z_12mm', r'square_z_27mm',
+                         r'square_z_39mm', r'square_z_45mm', 
+                         r'square_z_52.5mm',]]# Name of the MATLAB workspaces
+                           # for extra spectra
 #WRKSPCfilenames_both = [[r'circle_z_1.5mm', r'circle_z_12mm', 
 #                         r'circle_z_27mm', r'circle_z_39mm'], 
 #                        [r'square_z_1.5mm', r'square_z_12mm', 
@@ -76,13 +86,15 @@ WRKSPCfilenames_both = [[r'circle_z_1.5mm', r'circle_z_3mm',
     
 #WRKSPCfilenames_both = [[r'circle_z_52mm_POD2'], 
 #                        [r'square_z_52mm_POD2']]# Name of the MATLAB workspaces
+#                                                # for 2D planes
     
 zs = [1.5, 3, 4.5, 6, 7.5, 9, 10.5, 12, 15, 18, 21, 24, 27, 30, 33, 36, 39,
       42, 45, 46.5, 48, 49.5, 51, 52.5, 54, 55.5, 57]
-#zs = [1.5, 7.5, 10.5, 27, 45]
+#zs = [1.5, 7.5, 10.5, 27, 45] # original spectra
+zs = [1.5, 10.5, 12, 27, 39, 45, 52.5] # extra spectra
 #zs = [1.5, 12, 27, 39] #POD
 #zs = [10.5]
-#zs = [52]
+#zs = [52] # 2D planes
 num_planes = len(zs)
 plane_inds = np.arange(num_planes, dtype=int)
 
